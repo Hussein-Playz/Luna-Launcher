@@ -216,7 +216,7 @@ shadowJar {
 
 macAppBundle {
     mainClassName = 'com.atlauncher.App'
-    appName = 'ATLauncher'
+    appName = 'Luna Launcher'
     appStyle = 'universalJavaApplicationStub'
     runtimeConfigurationName = 'shadow'
     jarTask = 'shadowJar'
@@ -231,7 +231,7 @@ macAppBundle {
 }
 
 copyToResourcesJava {
-    rename("ATLauncher-${project.version}.jar", "ATLauncher.jar")
+    rename("Luna-Launcher-${project.version}.jar", "Luna-Launcher.jar")
 }
 
 def currentYear() {
@@ -241,7 +241,7 @@ def currentYear() {
 }
 
 launch4j {
-    outfile = "ATLauncher-${project.version}.exe"
+    outfile = "Luna-Launcher-${project.version}.exe"
     jreMinVersion = "${project.targetCompatibility.toString()}"
     mainClassName = 'com.atlauncher.App'
     icon = "${projectDir}/src/main/resources/assets/image/icon.ico"
@@ -297,7 +297,7 @@ task createMacApp(type: Zip) {
 }
 
 copyArtifacts.finalizedBy {
-    println 'ATLauncher has been built. Distribution files are located in the dist directory.'
+    println 'Luna Launcher has been built. Distribution files are located in the dist directory.'
 }
 
 clean.doFirst {
