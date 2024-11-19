@@ -1,22 +1,12 @@
-# ATLauncher
-
-![Application](https://github.com/ATLauncher/ATLauncher/workflows/Application/badge.svg?branch=master)
-[![Discord](https://discordapp.com/api/guilds/117047818136322057/embed.png?style=shield)](https://atl.pw/discord)
-
+# Luna Launcher
 ## What is it
 
-ATLauncher is a launcher for Minecraft which integrates multiple different modpacks to allow you to download and install
-modpacks easily and quickly.
+Luna Launcher is a fork of ATLauncher modified to my likeings
+Its being modified by a 13 year old
 
-## Links
+If you want to support then support [ATLauncher this link takes you to their github page](https://github.com/ATLauncher/ATLauncher/) i will only grab things i like from updates as this is just a hobby project i guess? i just want to modify it to my liking and remove stuff that i dont like, like the news tab that is gone from this modified version
 
--   [ATLauncher Website](https://atlauncher.com)
--   [ATLauncher Discord](https://atl.pw/discord)
--   [ATLauncher Facebook](https://www.facebook.com/ATLauncher)
--   [ATLauncher Reddit](https://www.reddit.com/r/ATLauncher)
--   [ATLauncher Twitter](https://twitter.com/ATLauncher)
-
-## Contributing to ATLauncher
+## Contributing to Luna Launcher
 
 Take a look at [CONTRIBUTING.md](CONTRIBUTING.md)
 
@@ -26,7 +16,7 @@ Please see the [TESTING.md](TESTING.md) file for information on how we write tes
 
 ## Prerequisites
 
-In order to build ATLauncher, you will need any Java version 8 or above. Java 8 is recommended since we compile to Java
+In order to build Luna Launcher, you will need any Java version 8 or above. Java 8 is recommended since we compile to Java
 8 compatability regardless.
 
 Everything else that's needed for the project is provided by Gradle, and accessed using the Gradle wrapper which can be
@@ -199,7 +189,7 @@ stream should be removed from the version so that everything will automatically 
 
 ## Translating
 
-ATLauncher is written for English speakers. All our translations are community run by those who take their time and
+Luna Launcher is written for English speakers. All our translations are community run by those who take their time and
 submit updates to the text in a different language.
 
 If you wish to help translate ATLauncher, please visit our page on [Crowdin](https://crowdin.com/project/atlauncher) and
