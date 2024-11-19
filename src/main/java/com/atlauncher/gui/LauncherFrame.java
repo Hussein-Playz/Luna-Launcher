@@ -50,7 +50,6 @@ import com.atlauncher.gui.tabs.ServersTab;
 import com.atlauncher.gui.tabs.SettingsTab;
 import com.atlauncher.gui.tabs.Tab;
 import com.atlauncher.gui.tabs.accounts.AccountsTab;
-import com.atlauncher.gui.tabs.news.NewsTab;
 import com.atlauncher.gui.tabs.tools.ToolsTab;
 import com.atlauncher.managers.AccountManager;
 import com.atlauncher.managers.LogManager;
@@ -166,12 +165,6 @@ public final class LauncherFrame extends JFrame implements RelocalizationListene
     private void setupTabs() {
         tabbedPane = new JTabbedPane(JTabbedPane.RIGHT);
         tabbedPane.setName("mainTabs");
-
-        PerformanceManager.start("newsTab");
-        NewsTab newsTab = new NewsTab();
-        this.tabs.put(UIConstants.LAUNCHER_NEWS_TAB, newsTab);
-        App.launcher.setNewsPanel(newsTab);
-        PerformanceManager.end("newsTab");
 
         PerformanceManager.start("createPackTab");
         CreatePackTab createPackTab = new CreatePackTab();

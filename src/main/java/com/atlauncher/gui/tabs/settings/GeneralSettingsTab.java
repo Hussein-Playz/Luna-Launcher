@@ -125,14 +125,11 @@ public class GeneralSettingsTab extends AbstractSettingsTab {
         gbc.insets = UIConstants.FIELD_INSETS;
         gbc.anchor = GridBagConstraints.BASELINE_LEADING;
         theme = new JComboBox<>();
-        theme.addItem(new ComboItem<>("com.atlauncher.themes.Dark", "ATLauncher Dark (default)"));
-        theme.addItem(new ComboItem<>("com.atlauncher.themes.Light", "ATLauncher Light"));
+		theme.addItem(new ComboItem<>("com.atlauncher.themes.LunaTheme", "Luna (Default)"));
         theme.addItem(new ComboItem<>("com.atlauncher.themes.MonokaiPro", "Monokai Pro"));
         theme.addItem(new ComboItem<>("com.atlauncher.themes.DraculaContrast", "Dracula Contrast"));
-        theme.addItem(new ComboItem<>("com.atlauncher.themes.HiberbeeDark", "Hiberbee Dark"));
         theme.addItem(new ComboItem<>("com.atlauncher.themes.Vuesion", "Vuesion"));
-        theme.addItem(
-                new ComboItem<>("com.atlauncher.themes.MaterialPalenightContrast", "Material Palenight Contrast"));
+        theme.addItem(new ComboItem<>("com.atlauncher.themes.MaterialPalenightContrast", "Material Palenight Contrast"));
         theme.addItem(new ComboItem<>("com.atlauncher.themes.ArcOrange", "Arc Orange"));
         theme.addItem(new ComboItem<>("com.atlauncher.themes.CyanLight", "Cyan Light"));
         theme.addItem(new ComboItem<>("com.atlauncher.themes.HighTechDarkness", "High Tech Darkness"));
@@ -236,7 +233,7 @@ public class GeneralSettingsTab extends AbstractSettingsTab {
         gbc.insets = UIConstants.FIELD_INSETS;
         gbc.anchor = GridBagConstraints.BASELINE_LEADING;
         selectedTabOnStartup = new JComboBox<>();
-        selectedTabOnStartup.addItem(new ComboItem<>(UIConstants.LAUNCHER_NEWS_TAB, GetText.tr("News")));
+//        selectedTabOnStartup.addItem(new ComboItem<>(UIConstants.LAUNCHER_NEWS_TAB, GetText.tr("News")));
         selectedTabOnStartup
                 .addItem(new ComboItem<>(UIConstants.LAUNCHER_CREATE_PACK_TAB, GetText.tr("Create Pack")));
         selectedTabOnStartup.addItem(new ComboItem<>(UIConstants.LAUNCHER_PACKS_TAB, GetText.tr("Packs")));
