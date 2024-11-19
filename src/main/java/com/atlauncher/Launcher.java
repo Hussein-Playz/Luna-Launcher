@@ -49,7 +49,6 @@ import com.atlauncher.graphql.type.AddLauncherLaunchInput;
 import com.atlauncher.graphql.type.LauncherJavaVersionInput;
 import com.atlauncher.gui.dialogs.ProgressDialog;
 import com.atlauncher.gui.tabs.PacksBrowserTab;
-import com.atlauncher.gui.tabs.news.NewsTab;
 import com.atlauncher.managers.AccountManager;
 import com.atlauncher.managers.ConfigManager;
 import com.atlauncher.managers.CurseForgeUpdateManager;
@@ -85,7 +84,6 @@ public class Launcher {
 
     // UI things
     private JFrame parent; // Parent JFrame of the actual Launcher
-    private NewsTab newsPanel; // The news panel
     private PacksBrowserTab packsBrowserPanel; // The packs browser panel
 
     // Update thread
@@ -381,7 +379,6 @@ public class Launcher {
 
             ConfigManager.loadConfig(); // Load the config
             NewsManager.loadNews(); // Load the news
-            reloadNewsPanel(); // Reload news panel
             PackManager.loadPacks(); // Load the Packs available in the Launcher
             reloadPacksBrowserPanel();// Reload packs browser panel
             PackManager.loadUsers(); // Load the Testers and Allowed Players for the packs
@@ -469,16 +466,6 @@ public class Launcher {
      *
      * @param newsPanel News Panel
      */
-    public void setNewsPanel(NewsTab newsPanel) {
-        this.newsPanel = newsPanel;
-    }
-
-    /**
-     * Reloads the panel used for News
-     */
-    public void reloadNewsPanel() {
-        this.newsPanel.reload(); // Reload the news panel
-    }
 
     /**
      * Reloads the panel used for the Packs browser

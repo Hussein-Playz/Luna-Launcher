@@ -670,7 +670,7 @@ public class App {
             matched = true;
 
             if (DialogManager.optionDialog().setTitle("Warning").setContent(new HTMLBuilder().center().text(
-                    "ATLauncher shouldn't be run from the Downloads folder.<br/><br/>Please put ATLauncher in it's own folder and run the launcher from there!")
+                    "Luna Launcher shouldn't be run from the Downloads folder.<br/><br/>Please put Luna Launcher in it's own folder and run the launcher from there!")
                     .build()).addOption("Yes It's fine", true).addOption("Whoops. I'll change that now")
                     .setType(DialogManager.ERROR).show() != 0) {
                 System.exit(0);
@@ -680,7 +680,7 @@ public class App {
         if (matched) {
             if (DialogManager.optionDialog().setTitle("Warning")
                     .setContent(new HTMLBuilder().center()
-                            .text("Are you absolutely sure you've put ATLauncher in it's own folder?<br/><br/>If you "
+                            .text("Are you absolutely sure you've put Luna Launcher in it's own folder?<br/><br/>If you "
                                     + "haven't and you click 'Yes, delete my files', this may delete "
                                     + FileSystem.CONFIGS.getParent().toFile().listFiles().length
                                     + " files and folders.<br/><br/>Are you 100% sure?")
@@ -725,12 +725,12 @@ public class App {
 
     private static void checkForBadFolderInstall() {
         if (!settings.ignoreOneDriveWarning && FileSystem.BASE_DIR.toString().contains("OneDrive")) {
-            LogManager.warn("ATLauncher installed within OneDrive!");
+            LogManager.warn("Luna Launcher installed within OneDrive!");
 
             int ret = DialogManager.yesNoDialog().addOption(GetText.tr("Don't remind me again"))
-                    .setTitle(GetText.tr("ATLauncher installed within OneDrive"))
+                    .setTitle(GetText.tr("Luna Launcher installed within OneDrive"))
                     .setContent(new HTMLBuilder().center().text(GetText.tr(
-                            "We have detected that you're running ATLauncher from within OneDrive.<br/><br/>This can cause serious issues and you should move the folder outside of OneDrive.<br/><br/>Do you want to close the launcher and do this now?"))
+                            "We have detected that you're running Luna Launcher from within OneDrive.<br/><br/>This can cause serious issues and you should move the folder outside of OneDrive.<br/><br/>Do you want to close the launcher and do this now?"))
                             .build())
                     .setType(DialogManager.WARNING).show();
 
@@ -745,12 +745,12 @@ public class App {
 
         if (OS.isWindows() && !settings.ignoreProgramFilesWarning
                 && FileSystem.BASE_DIR.toString().contains("Program Files")) {
-            LogManager.warn("ATLauncher installed within Program Files!");
+            LogManager.warn("Luna Launcher installed within Program Files!");
 
             int ret = DialogManager.yesNoDialog().addOption(GetText.tr("Don't remind me again"))
-                    .setTitle(GetText.tr("ATLauncher installed within Program Files"))
+                    .setTitle(GetText.tr("Luna Launcher installed within Program Files"))
                     .setContent(new HTMLBuilder().center().text(GetText.tr(
-                            "We have detected that you're running ATLauncher from within Program Files.<br/><br/>This can cause serious issues and you should move the folder outside of Program Files.<br/><br/>Do you want to close the launcher and do this now?"))
+                            "We have detected that you're running Luna Launcher from within Program Files.<br/><br/>This can cause serious issues and you should move the folder outside of Program Files.<br/><br/>Do you want to close the launcher and do this now?"))
                             .build())
                     .setType(DialogManager.WARNING).show();
 
@@ -768,11 +768,11 @@ public class App {
         try {
             if ((!testFile.exists() && !testFile.createNewFile())
                     || !FileSystem.BASE_DIR.resolve(".test").toFile().canWrite()) {
-                LogManager.error("ATLauncher cannot write files!");
+                LogManager.error("Luna Launcher cannot write files!");
 
-                DialogManager.okDialog().setTitle(GetText.tr("ATLauncher cannot write files"))
+                DialogManager.okDialog().setTitle(GetText.tr("Luna Launcher cannot write files"))
                         .setContent(new HTMLBuilder().center().text(GetText.tr(
-                                "We have detected that ATLauncher cannot write files in it's current location.<br/><br/>We cannot continue to run, you must move this folder somewhere else with write access.<br/><br/>Try moving to a folder in your Desktop or another drive.<br/><br/>You can also try running ATLauncher as administrator, but this is not recommended."))
+                                "We have detected that Luna Launcher cannot write files in it's current location.<br/><br/>We cannot continue to run, you must move this folder somewhere else with write access.<br/><br/>Try moving to a folder in your Desktop or another drive.<br/><br/>You can also try running Luna Launcher as administrator, but this is not recommended."))
                                 .build())
                         .setType(DialogManager.ERROR).show();
 
@@ -780,11 +780,11 @@ public class App {
                 System.exit(0);
             }
         } catch (IOException e) {
-            LogManager.error("ATLauncher cannot write files!");
+            LogManager.error("Luna Launcher cannot write files!");
 
-            DialogManager.okDialog().setTitle(GetText.tr("ATLauncher cannot write files"))
+            DialogManager.okDialog().setTitle(GetText.tr("Luna Launcher cannot write files"))
                     .setContent(new HTMLBuilder().center().text(GetText.tr(
-                            "We have detected that ATLauncher cannot write files in it's current location.<br/><br/>We cannot continue to run, you must move this folder somewhere else with write access.<br/><br/>Try moving to a folder in your Desktop or another drive.<br/><br/>You can also try running ATLauncher as administrator, but this is not recommended."))
+                            "We have detected that Luna Launcher cannot write files in it's current location.<br/><br/>We cannot continue to run, you must move this folder somewhere else with write access.<br/><br/>Try moving to a folder in your Desktop or another drive.<br/><br/>You can also try running Luna Launcher as administrator, but this is not recommended."))
                             .build())
                     .setType(DialogManager.ERROR).show();
 
