@@ -1,0 +1,10 @@
+Package: luna-launcher
+Version: 1.4-1
+Section: games
+Priority: optional
+Architecture: all
+Depends: java17-runtime | java-17-runtime, wget, desktop-file-utils
+Installed-Size: 2220
+Maintainer: Hussein Playz <houseinplayz@gmail.com>
+Description: A Fork of atlauncher
+Homepage: https://atlauncher.com

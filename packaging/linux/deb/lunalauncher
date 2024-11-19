@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+INSTDIR="${XDG_DATA_HOME-$HOME/.local/share}/lunalauncher"
+
+if [[ ! -d ${INSTDIR} ]]; then
+    mkdir -p $INSTDIR
+fi
+
+cd $INSTDIR
+
+if [[ ! -f ${INSTDIR}/Luna-Launcher-3.4.38.1.jar ]]; then
+    wget "https://github.com/Hussein-Playz/Luna-Launcher/releases/download/Release/Luna-Launcher-3.4.38.1.jar" 2>&1
+fi
+
+exec java -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -jar Luna-Launcher-3.4.38.1 --install-method=deb "$@"
