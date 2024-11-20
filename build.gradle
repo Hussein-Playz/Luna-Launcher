@@ -7,13 +7,13 @@ buildscript {
             url 'https://jitpack.io'
             content {
                 includeGroup "com.github.RyanTheAllmighty.gettext"
-                includeGroup "com.github.ATLauncher.gradle-macappbundle"
+                includeGroup "com.github.atlauncher.gradle-macappbundle"
             }
         }
     }
     dependencies {
         classpath 'com.github.RyanTheAllmighty.gettext:gettext-gradle-plugin:aab5c30bf8'
-        classpath 'com.github.ATLauncher.gradle-macappbundle:edu.sc.seis.macAppBundle.gradle.plugin:d22f8cdb94'
+        classpath 'com.github.atlauncher.gradle-macappbundle:edu.sc.seis.macAppBundle.gradle.plugin:d22f8cdb94'
     }
 }
 
@@ -36,7 +36,7 @@ apply plugin: 'org.mini2Dx.gettext'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
-group = 'com.atlauncher'
+group = 'com.luna'
 version = rootProject.file('src/main/resources/version').text.trim().replace('.Beta', '')
 
 repositories {
@@ -105,7 +105,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'com.atlauncher.App'
+    mainClass = 'com.luna.App'
     applicationDefaultJvmArgs = [
         "-Djna.nosys=true",
         "-Djava.net.preferIPv4Stack=true",
@@ -140,8 +140,8 @@ jar {
                 'SplashScreen-Image': '/assets/image/splash-screen.png',
                 'Implementation-Title': project.name,
                 'Implementation-Version': archiveVersion,
-                'Implementation-Vender': 'ATLauncher',
-                'Main-Class': 'com.atlauncher.App',
+                'Implementation-Vender': 'luna',
+                'Main-Class': 'com.luna.App',
                 'Multi-Release': 'true'
         )
     }
@@ -152,22 +152,22 @@ apollo {
         "ID" : "java.lang.String",
         "DateTime" : "java.util.Date"
     ]
-    packageName = "com.atlauncher.graphql"
+    packageName = "com.luna.graphql"
 }
 
 gettext {
     translations {
         srcDir = 'src'
-        include = 'main/java/com/atlauncher/**/*.java'
+        include = 'main/java/com/luna/**/*.java'
         excludes = [
-            'main/java/com/atlauncher/adapter/**/*.java',
-            'main/java/com/atlauncher/annot/**/*.java',
-            'main/java/com/atlauncher/collection/**/*.java',
-            'main/java/com/atlauncher/evnt/**/*.java',
-            'main/java/com/atlauncher/exceptions/**/*.java',
-            'main/java/com/atlauncher/interfaces/**/*.java',
-            'main/java/com/atlauncher/listener/**/*.java',
-            'main/java/com/atlauncher/utils/**/*.java'
+            'main/java/com/luna/adapter/**/*.java',
+            'main/java/com/luna/annot/**/*.java',
+            'main/java/com/luna/collection/**/*.java',
+            'main/java/com/luna/evnt/**/*.java',
+            'main/java/com/luna/exceptions/**/*.java',
+            'main/java/com/luna/interfaces/**/*.java',
+            'main/java/com/luna/listener/**/*.java',
+            'main/java/com/luna/utils/**/*.java'
         ]
         commentFormat = ' #. '
         outputFilename = 'translations.pot'
@@ -179,8 +179,8 @@ license {
     include '**/*.java'
     exclude 'io/github/**/*.java'
     exclude 'net/minecraft/**/*.java'
-    exclude 'com/atlauncher/graphql/**/*.java'
-    exclude 'com/atlauncher/gui/layouts/WrapLayout.java'
+    exclude 'com/luna/graphql/**/*.java'
+    exclude 'com/luna/gui/layouts/WrapLayout.java'
     newLine = false
     properties {
         year = currentYear()
@@ -215,8 +215,8 @@ shadowJar {
 }
 
 macAppBundle {
-    mainClassName = 'com.atlauncher.App'
-    appName = 'Luna Launcher'
+    mainClassName = 'com.luna.App'
+    appName = 'Luna-Launcher'
     appStyle = 'universalJavaApplicationStub'
     runtimeConfigurationName = 'shadow'
     jarTask = 'shadowJar'
@@ -243,7 +243,7 @@ def currentYear() {
 launch4j {
     outfile = "Luna-Launcher-${project.version}.exe"
     jreMinVersion = "${project.targetCompatibility.toString()}"
-    mainClassName = 'com.atlauncher.App'
+    mainClassName = 'com.luna.App'
     icon = "${projectDir}/src/main/resources/assets/image/icon.ico"
     version = "${project.version}"
     textVersion = "${project.version}"
