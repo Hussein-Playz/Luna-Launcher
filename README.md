@@ -8,7 +8,7 @@ If you want to support then support [ATLauncher this link takes you to their git
 
 ## Contributing to Luna Launcher
 
-Take a look at [CONTRIBUTING.md](CONTRIBUTING.md)
+Take a look at [CONTRIBUTING.md for ATLauncher specificly](https://github.com/ATLauncher/ATLauncher/blob/master/CONTRIBUTING.md) unless its a bug in my launcher that isnt present in their launcher
 
 ## Testing
 
