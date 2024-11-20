@@ -1,9 +1,0 @@
-query GetNeoForgeLoaderVersionsForMinecraftVersion($minecraftVersion: String!) {
-    loaderVersions(minecraftVersion: $minecraftVersion) {
-        neoforge {
-            version
-            rawVersion
-            recommended
-        }
-    }
-}

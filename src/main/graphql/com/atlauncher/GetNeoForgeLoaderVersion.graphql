@@ -1,7 +1,0 @@
-query GetNeoForgeLoaderVersion($neoForgeVersion: String!) {
-    neoForgeVersion(version: $neoForgeVersion) {
-        version
-        rawVersion
-        recommended
-    }
-}
