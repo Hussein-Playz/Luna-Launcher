@@ -102,7 +102,7 @@ extend one of the base ATLauncher themes depending on what you need:
 
 -   `Dark` is the default theme and is a dark theme. It's a good place to start with some defaults for new dark themes.
 -   `Light` is a light theme. It's a good place to start with some defaults for new light themes.
--   `ATLauncherLaf` is a base class which every theme MUST at some point extend. It provides some defaults including our
+-   `lunaLaf` is a base class which every theme MUST at some point extend. It provides some defaults including our
     brand colours and some defaults. This shouldn't be extended from unless you need absolute power.
 
 Once you've created your class (look at other themes in the directory for an idea on what you can do), you'll need to
